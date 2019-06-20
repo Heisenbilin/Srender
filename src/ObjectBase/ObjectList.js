@@ -23,7 +23,6 @@ var ObjectList = function (storage,painter,stack,collaMode) {
 
     this._objectList=[];
 
-   
 };
 
 ObjectList.prototype={
@@ -72,8 +71,6 @@ ObjectList.prototype={
             this.storage.addRoot(obj);
      //   }
         }
-        
-    
     },
 
     del: function(el) {

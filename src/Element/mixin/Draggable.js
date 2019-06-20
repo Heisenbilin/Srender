@@ -18,7 +18,6 @@ Draggable.prototype = {
     constructor: Draggable,
 
     _dragStart: function (e) {
-        console.log("this?:"+this._needsManuallyCompositing)
         var draggingTarget = e.target;
 
      //   if (draggingTarget && draggingTarget.draggable) {

@@ -86,18 +86,22 @@ Element.prototype = {
                 dx = 0;
                 break;
         }
-
-        var m = this.transform;
-        if (!m) {
-            m = this.transform = [1, 0, 0, 1, 0, 0];
+        if(this.type==='video'){
+            this.attr('style',{x:this.showStyle.x+dx,y:this.showStyle.y+dy});
         }
-        m[4] += dx;
-        m[5] += dy;
-        this.pipe({type:"attr",
-            tag:"position",
-            el:{id:this.id,position:[ m[4],m[5]]}
-        })  //是否要为主动和被动的位移分别设置函数
-        this.decomposeTransform();
+        else{
+            var m = this.transform;
+            if (!m) {
+                m = this.transform = [1, 0, 0, 1, 0, 0];
+            }
+            m[4] += dx;
+            m[5] += dy;
+            this.pipe({type:"attr",
+                tag:"position",
+                el:{id:this.id,position:[ m[4],m[5]]}
+            })  //是否要为主动和被动的位移分别设置函数
+            this.decomposeTransform();
+        }
         this.dirty(false);
     },
 
@@ -170,13 +174,11 @@ Element.prototype = {
         else if (zrUtil.isObject(key)) {
             for (var name in key) {
                 if (key.hasOwnProperty(name)) {
-                   
                     this.attrKV(name, key[name],mode);
                 }
             }
         }
         this.dirty(false);
-        
         return this;
     },
 
@@ -226,7 +228,6 @@ Element.prototype = {
     addSelfToZr: function (zr) {
 
         this.__zr = zr;
-
         
         // 添加动画
         var animators = this.animators;

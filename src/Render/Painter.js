@@ -505,7 +505,6 @@ Painter.prototype = {
             // Ignore culled element
             && !(el.culling && isDisplayableCulled(el, this._width, this._height))
         ) {
-
             var clipPaths = el.__clipPaths;
 
             // Optimize when clipping on group with several elements

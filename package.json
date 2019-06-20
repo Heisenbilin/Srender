@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/southproject/srenderlib#readme",
   "devDependencies": {
-    "webpack": "^4.27.1",
+    "webpack": "^4.29.6",
     "webpack-cli": "^3.1.2"
   }
 }

@@ -32,7 +32,7 @@ ZImage.prototype = {
             this,
             this.onload
         );
-
+        
         if (!image || !imageHelper.isImageReady(image)) {
             return;
         }
@@ -92,7 +92,7 @@ ZImage.prototype = {
         // Draw rect text
         if (style.text != null) {
             // Only restore transform when needs draw text.
-            this.restoreTransform(ctx);    
+            this.restoreTransform(ctx);
             this.drawRectText(ctx, this.getBoundingRect());
         }
     },

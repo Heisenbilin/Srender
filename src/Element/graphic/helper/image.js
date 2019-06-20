@@ -1,4 +1,4 @@
-
+//判断image是image类型还是image的src，最终返回带onload长和宽的image对象
 import LRU from '../../../util/core/LRU';
 
 var globalImageCache = new LRU(50);
@@ -88,4 +88,3 @@ function imageOnLoad() {
 export function isImageReady(image) {
     return image && image.width && image.height;
 }
-

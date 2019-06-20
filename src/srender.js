@@ -43,6 +43,7 @@ export var version = '1.0.1';
  * @param {number|string} [opts.height] Can be 'auto' (the same as null/undefined)
  * @return {module:srender/SRender}
  */
+
 export function init(dom, opts, collaMode) {
     var mode =  collaMode || false;
     var sr = new SRender(guid(), dom, opts, mode);
@@ -89,11 +90,10 @@ function delInstance(id) {
 //***************************************** */
 
 
-
-
 export {default as Group} from './Render/container/Group';
 export {default as Path} from './Element/graphic/Path';
 export {default as Image} from './Element/graphic/Image';
+export {default as Video} from './Element/graphic/Video';
 export {default as CompoundPath} from './Element/graphic/CompoundPath';
 export {default as Text} from './Element/graphic/Text';
 export {default as IncrementalDisplayable} from './Element/graphic/IncrementalDisplayable';
@@ -129,7 +129,6 @@ export {pathTool as path};
 export {zrUtil as util};
 
 export {parseSVG};
-
 
 
 //********************************************** */
