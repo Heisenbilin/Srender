@@ -277,7 +277,7 @@ SRender.prototype = {
        // this.storage.addRoot(el);
        this.objectList.add(el);
        this._needsRefresh = true;
-       
+
     },
 
     /**
